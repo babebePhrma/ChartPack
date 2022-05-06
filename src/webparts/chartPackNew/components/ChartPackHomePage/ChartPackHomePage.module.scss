@@ -1,0 +1,206 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.chartPackHomePage {
+  .navTransition {
+    transition-duration: 0.3s;
+  }
+  .chartPackParent {
+    .chartPackParentWrap {
+      display: grid;
+      grid-template-columns: calc(25% - 15px) calc(25% - 15px) calc(25% - 15px) calc(25% - 15px);
+      grid-gap: 20px;
+
+      .singleParentCard {
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        width: 96%;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        &:hover {
+          background-color: #0078D4;
+          color: #fff;
+        }
+
+        .cardImage {
+          width: 100%;
+          height: 280px;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+
+        .cardContent {
+          padding: 8px;
+          margin:5px;
+
+          h4 {
+            margin: 0 0 5px 0;
+            font-size: 15px;
+          }
+
+          .cardDescription {
+            font-size: 14px;
+            margin: 0 0 5px 0;
+            line-height: 1;
+          }
+
+          .cardTime {
+            font-size: 12px;
+            margin: 0;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .filterWrap {
+    display: grid;
+    grid-template-columns: calc(69% - 10px) calc(23% - 10px) calc(23% - 10px);
+    grid-gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  .topic {
+    .topicWrap {
+      display: grid;
+      grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+      grid-gap: 15px;
+
+      .topicSingle {
+        .topicTitle {
+          font-size: 16px;
+          margin: 0 0 5px 0;
+          color: #d55e27;
+          text-decoration: none;
+
+          .topicDescription {
+            font-size: 12px;
+            margin: 0;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .topicDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topSection {
+    display: flex;
+    flex-direction: row;
+    //align-items: left;
+    width:100%;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  @media only screen and (max-width: 1170px) {
+    .chartPackParent {
+      .chartPackParentWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+        .singleParentCard {
+          background-color: #fff;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          width: 100%;
+          border-radius: 2px;
+          cursor: pointer;
+          transition: all 0.3s linear;
+
+          &:hover {
+            background-color: #0078D4;
+            color: #fff;
+          }
+
+          .cardImage {
+            width: 100%;
+            height: 15vh;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+          }
+
+          .cardContent {
+            padding: 4px;
+
+            h4 {
+              margin: 0;
+              font-size: 12px;
+            }
+
+            .cardDescription {
+              font-size: 12px;
+              margin: 0 0 5px 0;
+              line-height: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.popupdownload {
+  margin-top: 15px;
+  text-align: center;
+
+  .CloseWindow {
+    padding: 10px 40px;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+}
+
+.popupImage {
+  width: 100%;
+  height: 84vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1170px) {
+  .popupImage {
+    width: 100vw;
+    height: 40vh;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .popupdownload {
+    margin-top: 5px;
+    text-align: center;
+
+    .CloseWindow {
+      padding: 4px;
+      font-size: 12px;
+    }
+
+    h3 {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
+  Modal .body {
+    width: 100vw;
+  }
+}
+
+.ms-Modal-scrollableContent {
+  overflow-y: hidden;
+}
