@@ -193,7 +193,8 @@ export default class ChartPackParent extends React.Component<IChartPackParentPro
         let uniqueChapterName = [];
         let chapterNameDD = [];
         if (text.trim() !== '') {
-            //let filterQuery = "( (Title eq '" + text + "') or (ChapterName eq '" + text + "') or (Presentation eq '" + text + "') )"
+            //let filterQuery = "( (Title eq '" + text + "') or (ChapterName eq '" + text + "') or (Presentation eq '" + text + "')  )"
+            //test
             let filterQuery = "( (substringof('" + text + "',Title)) or (substringof('" + text + "',ChapterName)) or (substringof('" + text + "',Presentation)) )";
             let parentDataLocal = await sp.web.lists.getByTitle("ALL Documents").items
                 .select("Title,IsParent,ChapterNumber,Featured,Topic/Title,Presentation,FileLeafRef,FileRef,ChapterName,ImageUrl")
